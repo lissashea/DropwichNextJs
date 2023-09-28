@@ -1,0 +1,15 @@
+version: '3.8' # Adjust the version as needed
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: myappuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: myappdb
+    ports:
+      - 5432:5432
+
+volumes:
+  pg_data:
